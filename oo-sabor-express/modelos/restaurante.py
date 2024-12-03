@@ -1,3 +1,6 @@
+from modelos.avaliacao import Avaliacao
+
+
 class Restaurante:
 
     restaurantes = []
@@ -8,6 +11,7 @@ class Restaurante:
         self._telefone = telefone
         self._rua = rua.upper()
         self._ativo = False
+        self._avaliacao = []
         Restaurante.restaurantes.append(self)
     
     def __str__(self):
@@ -26,8 +30,6 @@ class Restaurante:
     def alterar_estado(self):
         self._ativo = not self._ativo
 
-#restaurante_praca = Restaurante('praça', 'Gourmet', '40028922', 'Rua Curitiba')
-#restaurante_praca.alterar_estado()
-#restaurante_pizza = Restaurante('conteiner Pizzas', 'FastFood', '70707070', 'Rua Maringá')
-
-#Restaurante.listar_restaurantes()
+    def receber_avaliacao(self, cliente, nota):
+        avaliacao = Avaliacao(cliente, nota)
+        self._avaliacao.append(avaliacao)

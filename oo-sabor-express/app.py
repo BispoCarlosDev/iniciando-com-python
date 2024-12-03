@@ -6,6 +6,10 @@ restaurante_japones = Restaurante('Japa', 'Japonesa', '40028922', 'Rua Maringá'
 
 restaurante_japones.alterar_estado()
 
+restaurante_praca.receber_avaliacao('Carlos', 10)
+restaurante_praca.receber_avaliacao('Pedro', 9)
+restaurante_praca.receber_avaliacao('João', 8)
+
 def main():
     Restaurante.listar_restaurantes()
 
